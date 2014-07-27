@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Author:
+#   Mathias Bynens (@mathiasbynens)
+#   https://github.com/mathiasbynens/dotfiles/blob/3b4eb3efb692aa4d19a1e2c30c2ed9a65e9c7d8c/.functions#L71
+#
+# Description:
+#   Git diff with color
+#
+# Dependencies:
+#   Github
+
+# Use Git’s colored diff when available
+_git-clr-diff() {
+	hash git &>/dev/null;
+	if [ $? -eq 0 ]; then
+		git diff --no-index --color-words "$@";
+	fi;
+}
+
+_git-clr-diff "$@"
