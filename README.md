@@ -1,6 +1,6 @@
-# git-utils(1)
+# Git Utilities
 
-Git utilities I've collected over the years.
+Utilities for Git that I've collected over the years.
 
 ## One-line Install
 
@@ -10,12 +10,12 @@ $ bash -c "$(curl -#fL raw.github.com/iamnewton/git-utils/go/install)"
 
 ## Features
 
-* `git-clean-branches` - Remove all local branches that have been merged into master
-* `git-clr-diff` - Diff with color
-* `git-hublog` - Git log with per-commit cmd-clickable GitHub URLs (iTerm)
-* `git-pr` - Github pull request helper
-* `git-rank-contributors` - Script to trace through the logs and rank contributors
-* `git-wtf` - Displays the state of your repository in a readable, easy-to-scan format
+* `git clean-branches` - Remove all local branches that have been merged into master
+* `git clr-diff` - Diff with color
+* `git hublog` - Git log with per-commit cmd-clickable GitHub URLs (iTerm)
+* `git pr` - Github pull request helper
+* `git rank-contributors` - Script to trace through the logs and rank contributors
+* `git wtf` - Displays the state of your repository in a readable, easy-to-scan format
 
 ## Acknowledgements
 
