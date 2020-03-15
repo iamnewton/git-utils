@@ -4,15 +4,15 @@
 #   William Morgan (@wmorgan)
 #
 # Description:
-#   a simple script to trace through the logs and rank contributors by 
-#   the total size of the diffs of which they're responsible.  A change 
+#   a simple script to trace through the logs and rank contributors by
+#   the total size of the diffs of which they're responsible.  A change
 #   counts twice as much as a plain addition or deletion.
 #
 # Dependencies:
 #   None
 #
 # Usage:
-#   http://stackoverflow.com/a/10978258
+#   https://stackoverflow.com/a/10978258
 #   `git rank-contributors`
 
 class String

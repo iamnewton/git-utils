@@ -13,7 +13,7 @@
 #   @param   file    required
 #
 # Usage:
-#   http://stackoverflow.com/a/10978258
+#   https://stackoverflow.com/a/10978258
 #   `git wtf [branch+] [options]`
 
 HELP = <<EOS

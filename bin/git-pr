@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Author:
-#   Ben Alman (@cowboy) 
+#   Ben Alman (@cowboy)
 #
 # Description:
 #   Github pull request helper
@@ -14,7 +14,7 @@
 #   @param   step number [1-4]  optional
 #
 # Usage:
-#   http://stackoverflow.com/a/10978258
+#   https://stackoverflow.com/a/10978258
 #   `git pr 56 1`
 
 function help() {
@@ -22,7 +22,7 @@ function help() {
   local_ref=foo
   script="$(basename "$0") $pr"
   cat <<HELP
--=[ GitHub Pull Request Helper - "Cowboy" Ben Alman - http://benalman.com/ ]=-
+-=[ GitHub Pull Request Helper - "Cowboy" Ben Alman - https://benalman.com/ ]=-
 
   Usage: $(basename "$0") pull_request_id [ step ]
 

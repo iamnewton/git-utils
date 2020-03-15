@@ -1,15 +1,11 @@
-# git-utils
+# git-utils(1)
 
-Just a lot of git functions and scripts I've created and collected over the years.
-
-[![Version 1.0.0](http://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/chrisopedia/bash/releases/tag/1.3.0) [![Stories in Ready](https://badge.waffle.io/chrisopedia/git-utils.png?label=Ready)](http://waffle.io/chrisopedia/git-utils)
-
-For the most part, there shouldn't be any dependencies, but each script will have a place at the top that discusses the dependency.
+Git utilities I've collected over the years.
 
 ## One-line Install
 
 ```bash
-$ bash -c "$(curl -#fL raw.github.com/chrisopedia/git-utils/go/install)"
+$ bash -c "$(curl -#fL raw.github.com/iamnewton/git-utils/go/install)"
 ```
 
 ## Features
