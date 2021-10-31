@@ -7,13 +7,13 @@
 #   Git log with per-commit cmd-clickable GitHub URLs (iTerm)
 #
 # Dependencies:
-#   None
+#   git
 #
 # Configuration:
 #   None
 #
 # Usage:
-#   `git hublog 
+#   `git hublog
 
 _git-hublog() {
 	# Grabs the remote branch URL
@@ -31,8 +31,8 @@ AWK
 	)"
 
 	# add this to as an alias
-	#for n in {1..5}; do 
-	#    alias gf$n="gf -n $n"; 
+	#for n in {1..5}; do
+	#    alias gf$n="gf -n $n";
 	#done
 }
 
