@@ -5,7 +5,7 @@ Utilities for Git that I've collected over the years.
 ## One-line Install
 
 ```bash
-$ bash -c "$(curl -#fL raw.github.com/iamnewton/git-utils/go/install)"
+$ bash -c "$(curl -#fL https://raw.githubusercontent.com/iamnewton/git-utils/go/install)"
 ```
 
 ## Features
