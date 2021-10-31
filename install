@@ -22,7 +22,7 @@ if [[ ! -d "${DIR}" ]]; then
 
 	# Download the repository as a tarball
 	printf "%s┃%s Downloading repository to /tmp directory...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
-	curl -#fLo /tmp/${REPO}.tar.gz "https://github.com/${GITHUB_USER}/${REPO}/tarball/master"
+	curl -#fLo /tmp/${REPO}.tar.gz "https://github.com/${GITHUB_USER}/${REPO}/tarball/main"
 
 	# Extract to the ${REPO} directory
 	printf "%s┃%s Extracting files to %s...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "${DIR}" "$(tput sgr0)"
@@ -41,12 +41,13 @@ cd "${DIR}"
 # Initialize the git repository if it's missing
 printf "%s┃%s Initializing git repository...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
 git init
+git branch -m main
 
 printf "%s┃%s Adding https://github.com/%s/%s.git as origin...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "${GITHUB_USER}" "${REPO}" "$(tput sgr0)"
 git remote add origin "https://github.com/${GITHUB_USER}/${REPO}.git"
 
 printf "%s┃%s Downloading changes from origin...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
-git fetch origin master
+git fetch origin main
 
 # Reset the index and working tree to the fetched HEAD
 # (submodules are cloned in the subsequent sync step)
@@ -61,11 +62,7 @@ git clean -fd
 
 # Pull down the latest changes
 printf "%s┃%s Pulling down latest changes...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
-git pull --rebase origin master
-
-# Update submodules
-printf "%s┃%s Updating submodules...%s\n" "$(tput setaf 6)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
-git submodule update --recursive --init --quiet
+git pull --rebase origin main
 
 [[ $? ]] && printf "%s✓ Success:%s Repository has been updated.%s\n" "$(tput setaf 2)" "$(tput sgr0 ; tput setaf 7)" "$(tput sgr0)"
 
